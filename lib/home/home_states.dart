@@ -1,0 +1,29 @@
+import 'package:e_commerce/models/change_favorites_model.dart';
+
+abstract class ShopeStates{}
+class ShopeInitialState extends ShopeStates{}
+
+class ShopeChangeBottomNavState extends ShopeStates{}
+class ShopeLoadingHomeState extends ShopeStates{}
+
+class ShopeSuccessHomeState extends ShopeStates{}
+
+class ShopeErrorHomeState extends ShopeStates{}
+
+class ShopeSuccessCategoriesState extends ShopeStates{}
+
+class ShopeErrorCategoriesState extends ShopeStates{}
+
+class ShopeSuccessChangeFavoritesState extends ShopeStates{
+  final ChangeFavoritesModel model;
+
+  ShopeSuccessChangeFavoritesState(this.model);
+}
+
+class ShopeErrorChangeFavoritesState extends ShopeStates{}
+
+class ShopeChangeFavoritesState extends ShopeStates{}
+
+class ShopeSuccessGetFavoritesState extends ShopeStates{}
+class ShopeLoadingGetFavoritesState extends ShopeStates{}
+class ShopeErrorGetFavoritesState extends ShopeStates{}
