@@ -1,4 +1,5 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
+import 'package:e_commerce/constants.dart';
 import 'package:e_commerce/home/shope_layout.dart';
 import 'package:e_commerce/login/login_cubit.dart';
 import 'package:e_commerce/login/login_state.dart';
@@ -29,6 +30,7 @@ class Login extends StatelessWidget {
               print(state.loginModel.message);
               print(state.loginModel.data!.token);
               CacheHelper.saveData(key: 'token', value: state.loginModel.data!.token).then((value) {
+                token=state.loginModel.data!.token;
                 Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(

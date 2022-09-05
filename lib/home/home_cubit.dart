@@ -4,6 +4,7 @@ import 'package:e_commerce/favorites/favorits_screen.dart';
 import 'package:e_commerce/home/home_states.dart';
 import 'package:e_commerce/models/categories_model.dart';
 import 'package:e_commerce/models/home_model.dart';
+import 'package:e_commerce/models/login_model.dart';
 import 'package:e_commerce/products/products_screen.dart';
 import 'package:e_commerce/settings/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -111,6 +112,24 @@ class ShopeCubit extends Cubit<ShopeStates>{
     }).catchError((error){
 
       emit(ShopeErrorGetFavoritesState());
+    });
+  }
+
+
+  LoginModel? userModel;
+  void getUserData(){
+    emit(ShopeLoadingGetUserDataState());
+    DioHelper.getData(
+      url: PROFILE,
+      token: token,
+    ).then((value) {
+
+      userModel = LoginModel.fromJson(value.data);
+
+      emit(ShopeSuccessGetUserDataState(userModel!));
+    }).catchError((error){
+
+      emit(ShopeErrorGetUserDataState());
     });
   }
 }
