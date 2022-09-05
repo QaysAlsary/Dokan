@@ -201,7 +201,8 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
-              ));
+              )
+          );
         },
       ),
     );
