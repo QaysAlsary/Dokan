@@ -30,10 +30,10 @@ ThemeData darkTheme = ThemeData(
         backgroundColor: Colors.grey[800]),
     textTheme: const TextTheme(
         bodyText1: TextStyle(
-          fontSize: 18.0,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-        )));
+      fontSize: 18.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
+    )));
 ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.white,
     primaryColor: defaultColors,
@@ -62,7 +62,7 @@ ThemeData lightTheme = ThemeData(
     ),
     textTheme: const TextTheme(
         bodyText1: TextStyle(
-          fontSize: 18.0,
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-        )));
+      fontSize: 18.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.black,
+    )));
